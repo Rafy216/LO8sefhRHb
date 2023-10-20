@@ -1,0 +1,44 @@
+body {
+    background: fixed;
+    background-image: linear-gradient(to bottom, #46b7ff, #4dbdff, #55c3ff, #5ec9ff, #68cfff, #5bd6ff, #4eddff, #43e3ff, #00ecf9, #00f3ec, #00fada, #3bffc3);
+    margin: 10pt;
+}
+.ttl {
+    color: firebrick;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.floating-box {
+    box-sizing: border-box;
+    background-color: #defff2;
+    border-radius: 20px;
+    height: max-content;
+    margin: 0 auto;
+    text-align: center;
+    width: 360pt;
+}
+.floating-box > .child {
+    left: 50%;
+    position: relative;
+}
+.inp {
+    width: 280pt;
+}
+#res {
+    font-size: 16pt;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.button {
+    font-size: 12pt;
+    text-align: center;
+    width: 320pt;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    color: black;
+    font-weight: bold;
+    text-decoration-line: none;
+}

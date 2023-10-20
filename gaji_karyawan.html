@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Rafi">
+        <title>Gaji Karyawan</title>
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/gaji.css">
+    </head>
+    <body>
+        <h1 class="ttl">Gaji Karyawan</h1>
+        <div class="floating-box">
+            <table cellspacing="10">
+                <tr>
+                    <td colspan="2" style="text-align: left;"><strong>Menghitung gaji bersih karyawan</strong> dengan rumus:</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <p>Tunjangan<br>Pajak<br>Gaji Pokok</p>
+                    </td>
+                    <td style="text-align: left;">
+                        <p>= 20% (Gaji Pokok)<br>= 15% (Gaji Pokok + Tunjangan)<br>= Gaji Pokok + Tunjangan - Pajak</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 100pt; text-align: left;">Nama Karyawan</td>
+                    <td>
+                        <input id="nama" class="inp" type="text" placeholder="Nama Karyawan" name="nama">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Gaji Pokok (Rp)</td>
+                    <td>
+                        <input id="pokok" class="inp" type="number" placeholder="Gaji Pokok" name="pokok">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="next" class="button">Hitung</button>
+                        <p id="res"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <footer>
+        <p>Dibuat oleh <a href="https://rafy216.github.io/lSgmQWmLI6/" target="_blank">Rafianto - Teknik Informatika</a></p>
+    </footer>
+    <script>
+        let nama = document.getElementById("nama");
+        let pokok = document.getElementById("pokok");
+        let button = document.getElementById("next");
+        let res = document.getElementById("res");
+
+        button.addEventListener("click", function() {
+            if (nama.value.trim().length===0 || pokok.value.trim().length===0) {
+                res.innerHTML = "Belum bisa diproses, data tidak lengkap.";
+            } else {
+                let pkk = Number(pokok.value);
+                let tjg = (20/100)*pkk;
+                let pjk = (15/100)*(pkk+tjg);
+                res.innerHTML = "Gaji bersih atas nama <strong>"+String(nama.value)+"</strong> : <strong>Rp"
+                    +(pkk+tjg-pjk)+"</strong>";
+            }
+        });
+    </script>
+</html>

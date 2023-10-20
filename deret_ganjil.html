@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Rafi">
+        <title>Deret Bilangan Ganjil</title>
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/deret.css">
+    </head>
+    <body>
+        <h1 class="ttl">Deret Bilangan Ganjil</h1>
+        <div class="floating-box">
+            <table cellspacing="10">
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <h4>Menampilkan deret bilangan ganjil sampai bilangan yang diinput.</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batas Bilangan</td>
+                    <td>
+                        <input id="bil" class="inp" type="number" placeholder="Input batas bilangan" name="bil">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p style="text-align: left;">Apabila bilangan yang diinput merupakan float, maka akan dibulatkan.</p>
+                        <button id="next" class="button">Proses</button>
+                        <p id="res"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <footer>
+        <p>Dibuat oleh <a href="https://rafy216.github.io/lSgmQWmLI6/" target="_blank">Rafianto - Teknik Informatika</a></p>
+    </footer>
+    <script>
+        let bil = document.getElementById("bil");
+        let btn = document.getElementById("next");
+        let res = document.getElementById("res");
+        let num = 0;
+
+        function count(x) {
+            let last = []; let counter = 0;
+            for (let i = 1; i <= x; i++) {
+                if (i % 2 != 0) {
+                    last[counter] = i;
+                    counter++;
+                }
+            }
+            return last;
+        }
+
+        btn.addEventListener("click", function() {
+            if (bil.value.trim().length === 0) {
+                res.innerHTML = "Input bilangan terlebih dahulu!";
+            } else {
+                num = Math.round(Number(bil.value.trim()));
+                if (num<=1) {
+                    res.innerHTML = "Input bilangan harus lebih dari 1!";
+                } else if (num>100) {
+                    res.innerHTML = "Maaf, hasil perhitungan terlalu banyak.";
+                } else {
+                    res.innerHTML = count(num);
+                }
+            }
+        });
+    </script>
+</html>

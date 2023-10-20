@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Rafi">
+        <title>Aritmatika Dasar</title>
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/aritmatika.css">
+    </head>
+    <body>
+        <h1 class="ttl">Operator Aritmatika</h1>
+        <div class="floating-box">
+        <table cellspacing="10pt">
+            <tr>
+                <td style="width: 45pt;">Angka 1</td>
+                <td><input id="num1" class="inp" type="number" placeholder="Angka 1" name="num1"></td>
+            </tr>
+            <tr>
+                <td>Angka 2</td>
+                <td><input id="num2" class="inp" type="number" placeholder="Angka 2" name="num2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="pl" class="button">+</button>
+                    <button id="min" class="button">-</button>
+                    <button id="mult" class="button">x</button>
+                    <button id="div" class="button">/</button>
+                    <button id="mod" class="button">%</button>
+                    <button id="del" class="button">Del</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Hasil</td>
+                <td id="res">0</td>
+            </tr>
+        </table>
+        </div>
+    </body>
+    <footer>
+        <p>Dibuat oleh <a href="https://rafy216.github.io/lSgmQWmLI6/" target="_blank">Rafianto - Teknik Informatika</a></p>
+    </footer>
+    <script>
+        let n1 = document.getElementById("num1");
+        let n2 = document.getElementById("num2");
+        let res = document.getElementById("res");
+        let plus = document.getElementById("pl");
+        let minus = document.getElementById("min");
+        let multiply = document.getElementById("mult");
+        let divide = document.getElementById("div");
+        let mod = document.getElementById("mod");
+        let dlt = document.getElementById("del");
+        let x = 0; let y = 0; let n = 0;
+        
+        plus.addEventListener("click", function() {
+            if (n1.value.trim().length===0 || n2.value.trim().length===0) {
+                res.innerHTML = "Error";
+            } else {
+                x = Number(n1.value);
+                y = Number(n2.value);
+                res.innerHTML = x + y;
+            }
+        });
+        
+        minus.addEventListener("click", function() {
+            if (n1.value.trim().length===0 || n2.value.trim().length===0) {
+                res.innerHTML = "Error";
+            } else {
+                x = Number(n1.value);
+                y = Number(n2.value);
+                res.innerHTML = x - y;
+            }
+        });
+        
+        multiply.addEventListener("click", function() {
+            if (n1.value.trim().length===0 || n2.value.trim().length===0) {
+                res.innerHTML = "Error";
+            } else {
+                x = Number(n1.value);
+                y = Number(n2.value);
+                res.innerHTML = x * y;
+            }
+        });
+        
+        divide.addEventListener("click", function() {
+            if (n1.value.trim().length===0 || n2.value.trim().length===0) {
+                res.innerHTML = "Error";
+            } else {
+                x = Number(n1.value);
+                y = Number(n2.value);
+                res.innerHTML = x / y;
+            }
+        });
+        
+        mod.addEventListener("click", function() {
+            if (n1.value.trim().length===0 || n2.value.trim().length===0) {
+                res.innerHTML = "Error";
+            } else {
+                x = Number(n1.value);
+                y = Number(n2.value);
+                res.innerHTML = x % y;
+            }
+        });
+        
+        dlt.addEventListener("click", function() {
+            n1.value = "";
+            n2.value = "";
+            res.innerHTML = "0";
+        });
+    </script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Rafi">
+        <title>Penentuan Bilangan Ganjil-Genap</title>
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/gjlgnp.css">
+    </head>
+    <body>
+        <h1 class="ttl">Penentuan Bilangan Ganjil-Genap</h1>
+        <div class="floating-box">
+            <table cellspacing="10">
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <p>Menentukan bilangan yang diinput merupakan ganjil atau genap.</p>
+                        <p>Bilangan ganjil adalah bilangan asli yang tidak habis dibagi dua.
+                            <br>Bilangan genap adalah bilangan asli yang habis dibagi dua.
+                            <br>Bilangan asli adalah bilangan bulat positif yang bukan nol.
+                            <br>Bilangan bulat adalah bilangan yang bukan desimal atau pecahan.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bilangan</td>
+                    <td>
+                        <input id="bil" class="inp" type="number" placeholder="Masukkan bilangan" name="bil">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p style="text-align: left;">Apabila bilangan yang diinput merupakan float, maka akan dibulatkan.</p>
+                        <button id="show" class="button">Proses</button>
+                        <p id="res"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <footer>
+        <p>Dibuat oleh <a href="https://rafy216.github.io/lSgmQWmLI6/" target="_blank">Rafianto - Teknik Informatika</a></p>
+    </footer>
+    <script>
+        let bil = document.getElementById("bil");
+        let btn = document.getElementById("show");
+        let res = document.getElementById("res");
+
+        function sum(x) {
+            if (x % 2 === 0) return "genap";
+            else return "ganjil";
+        }
+        
+        btn.addEventListener("click", function() {
+            if (bil.value.trim().length === 0) {
+                res.innerHTML = "Bilangan belum diinput!"
+            } else {
+                let num = Math.round(Number(bil.value.trim()));
+                if (num <= 0) {
+                    res.innerHTML = "Harus bilangan asli {1,2,3,...}, sesuai dengan pengertian dari bilangan ganjil dan genap.";
+                } else {
+                    res.innerHTML = `Bilangan ${num} termasuk bilangan ${sum(num)}.`;
+                }
+            }
+            
+        })
+    </script>
+</html>

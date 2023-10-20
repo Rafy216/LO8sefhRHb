@@ -1,0 +1,52 @@
+body {
+    background: fixed;
+    background-image: linear-gradient(to bottom, #a4efff, #9bf3fc, #95f7f5, #94faec, #98fde1, #8afae4, #7cf7e8, #6df4ec, #55e9fe, #5fdbff, #80caff, #a4b8ff);
+}
+h1 {
+    font-weight: bold;
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+.floating-box {
+    box-sizing: border-box;
+    background-color: #defff2;
+    border-radius: 20px;
+    height: max-content;
+    margin: 0 auto;
+    width: 430pt;
+}
+.floating-box > .child {
+    left: 50%;
+    position: relative;
+}
+.button {
+    background-color: white;
+    border: 2px solid #73ff00;
+    font-size: 20pt;
+    margin: 10px;
+    width: 100%;
+}
+.button:hover {
+    background-color: #73ff00;
+    font-size: 20pt;
+    margin: 10px;
+}
+.button a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.button a:hover {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    color: black;
+    font-weight: bold;
+    text-decoration-line: none;
+}

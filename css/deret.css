@@ -1,0 +1,45 @@
+body {
+    background: fixed;
+    background-image: linear-gradient(to bottom, #00ff79, #00ff91, #00ffa7, #00ffba, #00ffca, #00f9dd, #00f3eb, #00ebf5, #00dafe, #00c7ff, #00b3ff, #009cff);
+    margin: 10pt;
+}
+.ttl {
+    color: darkblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.floating-box {
+    box-sizing: border-box;
+    background-color: #defff2;
+    border-radius: 20px;
+    height: max-content;
+    margin: 0 auto;
+    text-align: center;
+    width: 385pt;
+}
+.floating-box > .child {
+    left: 50%;
+    position: relative;
+}
+.inp {
+    width: 278pt;
+}
+#res {
+    font-size: 16pt;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 365pt;
+}
+.button {
+    font-size: 12pt;
+    text-align: center;
+    width: 350pt;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    color: black;
+    font-weight: bold;
+    text-decoration-line: none;
+}
